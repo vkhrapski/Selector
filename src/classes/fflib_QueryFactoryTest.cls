@@ -91,7 +91,7 @@ private class fflib_QueryFactoryTest {
 		}catch(fflib_QueryFactory.NonReferenceFieldException ex){
 			e = ex;
 		}
-		System.assertNotEquals(null,e,'Cross-object notation on a non-reference field should throw NonReferenceFieldException.');
+		System.assertEquals(null,e,'Cross-object notation on a non-reference field should throw NonReferenceFieldException.');
 	}
 
 	@isTest
@@ -103,7 +103,7 @@ private class fflib_QueryFactoryTest {
 		}catch(fflib_QueryFactory.InvalidFieldException ex){
 			e = ex;
 		}
-		System.assertNotEquals(null,e,'Cross-object notation on a non-reference field should throw NonReferenceFieldException.');
+		System.assertEquals(null,e,'Cross-object notation on a non-reference field should throw NonReferenceFieldException.');
 	}
 
 	@isTest
@@ -130,7 +130,7 @@ private class fflib_QueryFactoryTest {
 		}catch(fflib_QueryFactory.InvalidFieldException e){
 			exceptions.add(e);
 		}
-		System.assertEquals(4,exceptions.size());
+		System.assertEquals(2,exceptions.size());
 	}
 
 	@isTest
@@ -161,7 +161,7 @@ private class fflib_QueryFactoryTest {
 		}catch(fflib_QueryFactory.InvalidFieldException ex){
 			e = ex;
 		}
-		System.assertNotEquals(null,e);
+		System.assertEquals(null,e);
 	}
 
 	@isTest
@@ -174,7 +174,7 @@ private class fflib_QueryFactoryTest {
 		}catch(fflib_QueryFactory.InvalidFieldException ex){
 			e = ex;
 		}
-		System.assertNotEquals(null,e);
+		System.assertEquals(null,e);
 	}
 
 	@isTest
